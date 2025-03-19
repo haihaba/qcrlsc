@@ -179,7 +179,7 @@ get_params <-
       )
 
       param_ests = list()
-      for (q in 1:max(temp_data2[, block_cname])) {
+      for (q in unique(temp_data2[, block_cname])) {
         # loops over batches
         # subset to block #
         temp_data3 = temp_data2[which(temp_data2[, block_cname] == q), ]
